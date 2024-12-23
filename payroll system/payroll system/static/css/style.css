@@ -1,0 +1,114 @@
+/* 全局字体设置 */
+body {
+    font-family: Arial, sans-serif;
+    /* 背景图片设置 */
+    background-image: url('../../static/images/b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 表格单元格样式 */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 表头样式 */
+th,td {
+    background-color: #f2f2f2;
+}
+
+/* 链接样式 */
+a {
+    text-decoration: none;
+    color: #06c;
+}
+
+/* 链接悬停样式 */
+a:hover {
+    text-decoration: underline;
+}
+
+form {             
+    border: none; /* 移除边框 */
+    padding: 20px; /* 保持内边距 */
+    box-shadow: none; /* 移除阴影 */
+    width: 100%; /* 使表单宽度适应容器 */
+    max-width: 400px; /* 设置最大宽度 */
+    margin: 0 auto; /* 保持自动外边距 */
+}
+
+
+h1 {
+    text-align: center; /* 文本水平居中 */
+    margin-top: 50px; /* 根据需要调整上边距 */
+    margin-bottom: 50px; /* 根据需要调整下边距 */
+    /* 其他样式 */
+}
+label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+    padding-right: 15px; /* 为冒号留出空间 */
+}
+
+     /* 样式化<a>标签使其看起来像按钮 */
+     .button-like {
+        display: inline-block; /* 使<a>成为块级元素，可以设置宽度和高度 */
+        padding: 10px 20px; /* 内边距 */
+        font-size: 16px; /* 字体大小 */
+        text-align: center; /* 文本居中 */
+        text-decoration: none; /* 移除下划线 */
+        background-color: #007bff; /* 背景颜色 */
+        color: white; /* 文本颜色 */
+        border: 1px solid #007bff; /* 边框 */
+        border-radius: 5px; /* 边框圆角 */
+        cursor: pointer; /* 鼠标悬停时显示指针 */
+        transition: background-color 0.3s, border-color 0.3s; /* 过渡效果 */
+      }
+    
+      /* 鼠标悬停时的样式 */
+      .button-like:hover {
+        background-color: #0056b3; /* 悬停时背景颜色变深 */
+        border-color: #0056b3; /* 悬停时边框颜色变深 */
+      }
+
+  /* From www.lingdaima.com */
+  .custom-input {
+    background-color: #eee;
+    border: none;
+    padding: 5px; /* 可以根据需要调整内边距 */
+    font-size: 16px; /* 字体大小保持不变，以适应一个字符的高度 */
+    width: 50px; /* 增加宽度 */
+    border-radius: 1px;
+    color: lightcoral;
+    box-shadow: 0 0.4px #dfd9d9;
+    cursor: pointer;
+    line-height: 1; /* 确保高度适应一个字符 */
+    height: 24px; /* 设置高度大约为一个字符的高度，根据实际字体大小调整 */
+  }
+  
+  .custom-input:active {
+    color: white;
+    box-shadow: 0 0.2px #dfd9d9;
+    transform: translateY(0.2rem);
+  }
+  
+  .custom-input:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1px #bcb4b4;
+  }
+  
+  .custom-input:disabled {
+    cursor: auto;
+    color: grey;
+  }

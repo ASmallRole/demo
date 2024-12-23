@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工资管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <h1>员工工资列表</h1>
+    <a href="/add" class="button-like">添加新员工</a>
+    <a href="/show" class="button-like">公司布局</a><br>
+    
+    <form action="/search" method="post">
+        <input type="text" name="query" placeholder="输入工号">
+        <button type="submit" class="custom-input">搜索</button>
+    </form>
+    <table>
+        <tr>
+            <th>部门</th>
+            <th>职业</th>
+            <th>工号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>工资（元/月）</th>
+            <th>删除</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee[0] }}</td>
+            <td>{{ employee[1] }}</td>
+            <td>{{ employee[10] }}</td>
+            <td>{{ employee[2] }}</td>
+            <td>{{ employee[3] }}</td>
+            <td>{{ employee[4] }}</td>
+            <td>{{ employee[5] }}</td>
+            <td>
+                <a href="/edit/{{ employee[10] }}">编辑</a> |
+                <a href="/delete/{{ employee[10] }}" onclick="return confirm('确定要删除这个员工吗？')">删除</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

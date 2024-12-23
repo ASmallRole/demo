@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <!-- <style>
+    </style> -->
+</head>
+<body>
+    <h1>员工列表</h1>
+        <a href="/"class="button-like">返回员工列表</a>
+    <table>
+        <tr>
+            <th>部门</th>
+            <th>职业</th>
+            <th>工号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>基本工资</th>
+            <th>福利</th>
+            <th>奖金</th>
+            <th>失业保险</th>
+            <th>住房公积金</th>
+            <th>总工资</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee[0] }}</td>
+            <td>{{ employee[1] }}</td>
+            <td>{{ employee[10] }}</td>
+            <td>{{ employee[2] }}</td>
+            <td>{{ employee[3] }}</td>
+            <td>{{ employee[4] }}</td>
+            <td>{{ employee[5] }}</td>
+            <td>{{ employee[6] }}</td>
+            <td>{{ employee[7] }}</td>
+            <td>{{ employee[8] }}</td>
+            <td>{{ employee[9] }}</td>
+            <td>{{employee[5]+employee[6]+employee[7]-employee[8]-employee[9]}}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

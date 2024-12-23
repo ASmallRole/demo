@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工信息</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <h1>公司布局</h1>
+    <form method="post">
+        <table>
+            <tr>
+                <th>单位</th>
+                <th>职业</th>
+                <th>人数</th>
+                <th>平均工资</th>
+                <th>总工资</th>
+            </tr>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee[0] }}</td>
+                <td>{{ employee[1] }}</td>
+                <td>{{ employee[2] }}</td>
+                <td>{{ employee[3] }}</td>
+                <td>{{ employee[4] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    <a href="/"class="button-like">返回员工列表</a>
+</body>
+</html>
